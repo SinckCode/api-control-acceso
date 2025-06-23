@@ -12,8 +12,11 @@ app.use(express.json());
 // Rutas
 app.use('/api/users', require('./routes/userRoutes'));
 app.use('/api/access', require('./routes/accessRoutes'));
-app.use('/api/parking/status', require('./routes/parkingRoutes'));
+app.use('/api/parking', require('./routes/parkingRoutes'));
 app.use('/api/access_logs', require('./routes/logsRoutes'));
+app.use('/api/auth', require('./routes/authRoutes'));
+app.use('/api/auth-users', require('./routes/authUsersRoutes'));
+app.use('/api/pluma', require('./routes/plumaRoutes'));
 
 // Inicio del servidor
 app.listen(PORT, () => {

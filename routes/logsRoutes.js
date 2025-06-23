@@ -1,16 +1,17 @@
 const express = require('express');
 const router = express.Router();
-const AccessLog = require('../models/accessLogsModel');
+const {
+    getAllLogs,
+    getLogById,
+    createLog,
+    updateLog,
+    deleteLog
+} = require('../controllers/logsController');
 
-// GET /api/access_logs → obtener historial completo
-router.get('/', (req, res) => {
-    AccessLog.getAll((err, results) => {
-        if (err) {
-            console.error('Error al obtener access_logs:', err);
-            return res.status(500).json({ error: 'Error al obtener access_logs' });
-        }
-        res.json(results);
-    });
-});
+router.get('/', getAllLogs);
+router.get('/:id', getLogById);
+router.post('/', createLog);
+router.put('/:id', updateLog);
+router.delete('/:id', deleteLog);
 
 module.exports = router;

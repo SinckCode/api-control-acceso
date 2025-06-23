@@ -29,11 +29,13 @@ CREATE TABLE IF NOT EXISTS parking_status (
     updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
+ALTER TABLE parking_status ADD COLUMN is_reserved BOOLEAN DEFAULT 0;
+
+
 -- Insertar un registro inicial
 INSERT IGNORE INTO parking_status (id, is_occupied, is_heat_detected) VALUES (1, 0, 0);
 
 
--- Tabla auth_users (para login de guardias)
 CREATE TABLE IF NOT EXISTS auth_users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
