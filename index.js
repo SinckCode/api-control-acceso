@@ -17,6 +17,9 @@ app.use('/api/access_logs', require('./routes/logsRoutes'));
 app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/auth-users', require('./routes/authUsersRoutes'));
 app.use('/api/pluma', require('./routes/plumaRoutes'));
+app.use('/api/pluma2', require('./routes/pluma2Routes'));
+app.use('/api/buzzer', require('./routes/buzzerRoutes'));
+
 
 // Inicio del servidor
 app.listen(PORT, () => {
