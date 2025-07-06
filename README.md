@@ -204,6 +204,6 @@ Este proyecto se distribuye bajo la licencia MIT.
 
 Si tienes preguntas o sugerencias, puedes escribirme a:
 
-📧 [tu-email@ejemplo.com]
+📧 [soyangeldavid1@gmail.com]
 
 ---
